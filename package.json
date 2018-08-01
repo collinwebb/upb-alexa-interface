@@ -1,0 +1,26 @@
+{
+  "name": "upb-alexa-interface",
+  "version": "0.0.1",
+  "description": "alexa to upb smart power system using raspberry pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinwebb/upb-alexa-interface.git"
+  },
+  "keywords": [
+    "alexa",
+    "upb",
+    "smarthome",
+    "smartlights",
+    "raspberrypi"
+  ],
+  "author": "Collin Webb <collindwebb@gmail.com> (https://github.com/collinwebb/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collinwebb/upb-alexa-interface/issues"
+  },
+  "homepage": "https://github.com/collinwebb/upb-alexa-interface#readme"
+}
