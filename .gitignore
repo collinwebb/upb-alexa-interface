@@ -1,2 +1,4 @@
 UPBsettings/sourceFile/*
 UPBsettings/settings.json
+!UPBsettings/.keep
+UPBsettings/sourceFile/.keep

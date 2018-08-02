@@ -1,5 +1,6 @@
 let fs = require('fs'),
-    UPBfile = fs.readdirSync('UPBsettings/sourceFile/')[0];
+    possibleFiles = fs.readdirSync('UPBsettings/sourceFile/'),
+    UPBfile = possibleFiles[0] === '.keep' ? possibleFiles[1] : possibleFiles[0];
 
 let createUPBobjectEntries = (csvLine) => {
   let UPBarray = csvLine.split(',');
@@ -46,7 +47,6 @@ let processFile = (inputFile) => {
       if(err) {
         return console.log('error!!');
       }
-      console.log(UPBdictionary);
     });
   });
 };
