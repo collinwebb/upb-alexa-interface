@@ -59,14 +59,13 @@ const processFile = (inputFile) => {
     // Adding some restrictions.
     // [Note: if more restrictions are needed made a js file to handle them.]
     UPBdictionary.switchOrSceneRestrictions = {
-      // The switchOrSceneID is the same as the object key.
-      // In this casse I needed to prevent the upb device ID 3 from being dimmed.
-
       // I've made a value the same as the keys to more easily return the values...
-      //I don't actually know if this is a good idea, but I'm trying it.
-      '3': {
-        'switchOrSceneID': '3',
-        'commands': {
+      // I don't actually know if this is a good idea, but I'm trying it.
+      'onOffOnly': {
+        // I'm making an object of trues for non-dimmable switches/scenes,
+        // so I can check and prevent damage to any non-dimming switches.
+        'isNotDimmable': {'3': true},
+        'availableCommands': {
           'activate': {'name': 'activate', 'commandNumber':20, 'allowed': true},
           'deactivate': {'name': 'deactivate', 'commandNumber':21, 'allowed': true},
           'goto': {'name': 'goto', 'commandNumber':22, 'allowed': false},
