@@ -59,33 +59,10 @@ const processFile = (inputFile) => {
     // Adding some restrictions.
     // [Note: if more restrictions are needed made a js file to handle them.]
     UPBdictionary.switchOrSceneRestrictions = {
-      // I've made a value the same as the keys to more easily return the values...
-      // I don't actually know if this is a good idea, but I'm trying it.
-      'onOffOnly': {
+      'nonDimmable': {
         // I'm making an object of trues for non-dimmable switches/scenes,
         // so I can check and prevent damage to any non-dimming switches.
-        'isNotDimmable': {'3': true},
-        'availableCommands': {
-          'activate': {'name': 'activate', 'commandNumber':20, 'allowed': true},
-          'deactivate': {'name': 'deactivate', 'commandNumber':21, 'allowed': true},
-          'goto': {'name': 'goto', 'commandNumber':22, 'allowed': false},
-          'fadeStart': {'name': 'fadeStart', 'commandNumber':23, 'allowed': false},
-          'fadeStop': {'name': 'fadeStop', 'commandNumber':24, 'allowed': false},
-          'blink': {'name': 'blink', 'commandNumber':25, 'allowed': false},
-          'indicate': {'name': 'indicate', 'commandNumber':26, 'allowed': false},
-          'toggle': {'name': 'toggle', 'commandNumber':27, 'allowed': true},
-          'reportState': {'name': 'reportState', 'commandNumber':30, 'allowed': true},
-          'storeState': {'name': 'storeState', 'commandNumber':31, 'allowed': true},
-          'ackResponse': {'name': 'ackResponse', 'commandNumber':80, 'allowed': true},
-          'setupTimeReport': {'name': 'setupTimeReport', 'commandNumber':85, 'allowed': true},
-          'deviceStateReport': {'name': 'deviceStateReport', 'commandNumber':86, 'allowed': true},
-          'deviceStatusReport': {'name': 'deviceStatusReport', 'commandNumber':87, 'allowed': true},
-          'registerValuesReport': {'name': 'registerValuesReport', 'commandNumber':90, 'allowed': true},
-          'RAMvaluesReport': {'name': 'RAMvaluesReport', 'commandNumber':91, 'allowed': true},
-          'rawDataReport': {'name': 'rawDataReport', 'commandNumber':92, 'allowed': true},
-          'heartbeatReport': {'name': 'heartbeatReport', 'commandNumber':93, 'allowed': true},
-          'deviceSignatureReport': {'name': 'deviceSignatureReport', 'commandNumber':143, 'allowed': true}
-        }
+        '3': true
       }
     };
     fs.writeFile("UPBsettings/settings.json", JSON.stringify(UPBdictionary), (err) => {
